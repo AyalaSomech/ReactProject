@@ -6,6 +6,37 @@ import ImagesPass from './lesson_2/component/click'
 function App() {
   return (
     <div className="App">
+  {/* <ImagesPass></ImagesPass> */}
+  <nav>
+
+  </nav>
+  
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -21,9 +52,4 @@ function App() {
         </a>
         <Logo></Logo>
       </header> */}
-      <ImagesPass></ImagesPass>
-    </div>
-  );
-}
-
-export default App;
+    
