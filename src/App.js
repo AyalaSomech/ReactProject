@@ -2,15 +2,28 @@ import logo from './logo.svg';
 import './App.css';
 // import Logo from './component/logo1';
 import ImagesPass from './lesson_2/component/click'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./project/PageComponent/Home";
+import About from "./project/PageComponent/About";
+import Connect from "./project/PageComponent/Connect";
+
+
 
 function App() {
   return (
     <div className="App">
-  {/* <ImagesPass></ImagesPass> */}
-  <nav>
+      <Router>
+        <nav>
+        <a href="/">Home</a> | <a href="/about">About</a> | <a href='/connect'>Connect</a>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/connect" element={<Connect />} />
+        </Routes>
+      </Router>
 
-  </nav>
-  
+
     </div>
   );
 }
@@ -37,7 +50,7 @@ export default App;
 
 
 
-      {/* <header className="App-header">
+{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -52,4 +65,4 @@ export default App;
         </a>
         <Logo></Logo>
       </header> */}
-    
+{/* <ImagesPass></ImagesPass> */ }
