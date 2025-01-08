@@ -2,28 +2,35 @@ import logo from './logo.svg';
 import './App.css';
 // import Logo from './component/logo1';
 import ImagesPass from './lesson_2/component/click'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./project/PageComponent/Home";
-import About from "./project/PageComponent/About";
-import Connect from "./project/PageComponent/Connect";
-
+import { NavbarBrand } from 'react-bootstrap';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import Home from "./project/Pages/Home";
+import About from "./project/Pages/About";
+import Connect from "./project/Pages/Connect";
+import Services from "./project/Pages/Services";
+import TenckYou from "./project/component/TenckYou"
 
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <nav>
-        <a href="/">Home</a> | <a href="/about">About</a> | <a href='/connect'>Connect</a>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/connect" element={<Connect />} />
-        </Routes>
-      </Router>
 
-
+  {/* <ImagesPass></ImagesPass> */}
+  <BrowserRouter>
+  <nav>
+    <Link to="/">Home</Link> | 
+    <Link to="/about">About</Link> | 
+    <Link to="/connect">Connect</Link> | 
+    <Link to="/services">Services</Link> | 
+  </nav>
+  <Routes>
+    <Route path='/' element={<Home />}/>
+    <Route path='/about' element={<About />}/>
+    <Route path='/connect' element={<Connect />}/>
+    <Route path='/services' element={<Services />}/>
+    <Route path='/TenckYou' element={<TenckYou />}/>
+  </Routes>
+  </BrowserRouter>
     </div>
   );
 }
