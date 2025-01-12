@@ -1,7 +1,9 @@
 //תודה 
+import { useTranslation } from 'react-i18next';
 
 export default function TenckYou(){
+    const{t}=useTranslation(); 
     return <>
-    <h1>Thanks for getting in touch</h1>
+    <h1>{t("Tenck_You_Connect")}</h1>
     </>
 }
