@@ -28,12 +28,12 @@ function App() {
 
       {/* <ImagesPass></ImagesPass> */}
       <BrowserRouter>
-        <NavbarBrand className="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm mb-2">
+        <NavbarBrand className="nav nav-pills nav-fill gap-2 p-1 small bg-info rounded-3 shadow-sm mb-2">
           <div className='d-flex justify-content-between w-100'>
-            <Link className="nav-link active rounded-5" to="/">{t("Home")}</Link>
-            <Link className="nav-link active rounded-5" to="/about">{t("About")}</Link>
-            <Link className="nav-link active rounded-5" to="/connect">{t("Connect")}</Link>
-            <Link className="nav-link active rounded-5" to="/services">{t("Services")}</Link>
+            <Link className="nav-link active bg-info" to="/">{t("Home")}</Link>
+            <Link className="nav-link active bg-info" to="/about">{t("About")}</Link>
+            <Link className="nav-link active bg-info" to="/connect">{t("Connect")}</Link>
+            <Link className="nav-link active bg-info" to="/services">{t("Services")}</Link>
           </div>
         </NavbarBrand>
         <Routes>
@@ -45,8 +45,8 @@ function App() {
         </Routes>
       </BrowserRouter>
       <div className="position-fixed bottom-0 end-0 p-3">
-      <button className='btn btn-outline-primary me-2' onClick={() => translat('en')}>English</button>
-      <button className='btn btn-outline-primary' onClick={() => translat('he')}>עברית</button>
+      <button className='btn btn-outline-info me-2' onClick={() => translat('en')}>English</button>
+      <button className='btn btn-outline-info' onClick={() => translat('he')}>עברית</button>
       </div>
     </div>
   );
