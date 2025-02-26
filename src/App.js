@@ -10,23 +10,23 @@ import Connect from "./project/Pages/Connect";
 import Services from "./project/Pages/Services";
 import TenckYou from "./project/component/TenckYou"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { useTranslation } from 'react-i18next';
 import i18next from "./project/i18next";
-
-
-
-// import "container-fluid"
-// import 'navbar navbar-expand-lg bg-body-tertiary';
-
+import WithLoggin from './HOC_lesson_8/WithLoggin';
+import Date from './HOC_lesson_8/Date';
 
 function App() {
   const { t, i18n } = useTranslation();
   const translat = (language) => (i18n.changeLanguage(language));
+  const DateWithLoggin=WithLoggin(Date);
   return (
-    <div className="App">
+    <>
+    
+  
+  {/* <div className="App"> */}
 
-      {/* <ImagesPass></ImagesPass> */}
+       {/* <ImagesPass></ImagesPass> 
       <BrowserRouter>
         <NavbarBrand className="nav nav-pills nav-fill gap-2 p-1 small bg-info rounded-3 shadow-sm mb-2">
           <div className='d-flex justify-content-between w-100'>
@@ -48,7 +48,12 @@ function App() {
       <button className='btn btn-outline-info me-2' onClick={() => translat('en')}>English</button>
       <button className='btn btn-outline-info' onClick={() => translat('he')}>עברית</button>
       </div>
-    </div>
+     </div> */}
+     <DateWithLoggin date="26/02/2025" name="AyalaSomech"></DateWithLoggin>
+     </>
+     
+     
+     
   );
 }
 
