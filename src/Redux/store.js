@@ -1,3 +1,12 @@
-import { ToDo_Add } from "../ToDo/ToDo";
-import { legacy_createStore as createStore } from "redux";
-export const store = createStore(ToDo_Add);
+import { ToDoReduser } from "./Reducers/ToDoReducers";
+import { RicycleBin } from "./Reducers/ricycleBinReducer";
+import { applyMiddleware, legacy_createStore as createStore, combineReducers } from "redux";
+import { IfNull } from "./Middleware/ifNull";
+
+const rootReducer = combineReducers({
+    todo: ToDoReduser,
+    ricycle: RicycleBin,
+})
+
+export const store = createStore(rootReducer, applyMiddleware(IfNull));
+console.log(store.getState())
